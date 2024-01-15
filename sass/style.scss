@@ -1,7 +1,36 @@
-body {
-  background-color: beige;
+.carousel-caption {
+  right: auto;
+  bottom: auto;
+  padding: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.title {
-  font-size: large;
+.carousel-tekst {
+  font-size: 50px;
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.newsletter {
+  background-color: #eff2f5;
+}
+.card {
+  background-color: #eff2f5;
+}
+.container-footer {
+  background-color: #ced6e0;
 }
