@@ -1,16 +1,16 @@
 {
   "name": "npm-project",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000n\u0000p\u0000m\u0000-\u0000p\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "",
+  "main": "index.html",
   "scripts": {
     "init-project": "npm install && npm-run-all init:*",
-    "init:dirs": "mkdir sass css vendor images js",
+    "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:html",
     "test:html": "html-validate *.html",
-    "build": "npm-run-all build:* test",
+    "build": "npm-run-all build:* ",
     "build:sass": "sass --style=compressed --no-source-map sass:css",
     "build:autoprefixer": "postcss css/*.css --use autoprefixer -d css",
     "build-dev": "npm-run-all build-dev:sass build:autoprefixer",
@@ -22,15 +22,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
-    "browser-sync": "^3.0.2",
-    "html-validate": "^8.9.1",
-    "mkdirp": "^3.0.1",
+    "browser-sync": "^2.26.3",
+    "mkdirp": "^0.5.1",
+    "sass": "^1.44.0",
     "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
-    "postcss": "^8.2.6",
+    "html-validate": "^2.8.0",
+    "onchange": "^5.2.0",
+    "autoprefixer": "^10.2.4",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.69.7"
+    "postcss": "^8.2.6"
   }
 }
